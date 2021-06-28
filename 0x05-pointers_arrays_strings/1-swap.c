@@ -1,18 +1,18 @@
-#include "holberton.h"
+include "holberton.h"
 
-/*
- * swap_int - swaps the value of two integers
- * @a: pointer of int
- * @b: pointer of int
- * Return: void
+/**
+ * swap_int - swaps two integer
+ *
+ * @a: first integer
+ * @b: second integer
+ *
+ * Return: Void
  */
-
 void swap_int(int *a, int *b)
 {
 int tmp;
 
-tmp = *a; 
+tmp = *a;
 *a = *b;
 *b = tmp;
-
 }
