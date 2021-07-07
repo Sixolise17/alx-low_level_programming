@@ -1,22 +1,17 @@
-#include "holberton.h"
+include "holberton.h"
 
 /**
- * _pow_recursion - unction that returns value of x raised to the power of y.
- * @x: first integer
- * @y: second integer
- * Return: Result
+ * _pow_recursion - returns the value of x raised to the power of y.
+ * @x: base.
+ * @y: exponent.
+ * Return: value of the exponentiation.
  */
 int _pow_recursion(int x, int y)
 {
-int pw = 1;
-
 if (y < 0)
 return (-1);
-
-if (!y)
+else if (y == 0)
 return (1);
-
-pw = _pow_recursion(x, y - 1);
-
-return (pw * x);
+else
+return (x * _pow_recursion(x, y - 1));
 }
