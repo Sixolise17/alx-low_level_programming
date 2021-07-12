@@ -19,7 +19,7 @@ count = 1;
 sum = 0;
 if (argc == 1)
 {
-intf("0\n");
+printf("0\n");
 return (0);
 }
 while (count < argc)
