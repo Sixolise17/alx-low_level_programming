@@ -16,7 +16,7 @@ i = 0;
 if (size != 0)
 ar = malloc(size * sizeof(c));
 else
-return (NULL)
+return (NULL);
 if (ar == NULL)
 return (NULL);
 while (i < size)
