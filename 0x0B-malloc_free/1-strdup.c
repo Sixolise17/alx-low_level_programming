@@ -24,7 +24,7 @@ nstr = malloc(len *sizeof(*str));
 if (nstr == NULL)
 return (NULL);
 while (i <= len)
-    {
+{
 nstr[i] = str[i];
 i++;
 }
