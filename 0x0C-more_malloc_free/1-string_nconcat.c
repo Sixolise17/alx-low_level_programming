@@ -1,42 +1,39 @@
 #include "holberton.h"
 #include <stdlib.h>
-
 /**
- * string_nconcat - concatenates n number of s1 to s2
- *
+ * *string_nconcat - concatenates two strings
  * @s1: first string
  * @s2: second string
- * @n: number of s2 to concatenate
- *
- * Return: s1_s2
- */
+ * @n: limit of s2
+ * Return: pointer to new space in memory or null
+ **/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-char *s1_s2;
-unsigned int size1, size2;
-unsigned int count, count2;
+char *strDup;
+int i;
+unsigned int j;
 
 if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
 s2 = "";
-
-for (size1 = 0; s1[size1] != '\0'; size1++)
-;
-for (size2 = 0; s2[size2] != '\0'; size2++)
-;
-if (n < size2)
-size2 = n;
-
-s1_s2 = malloc(sizeof(char) * (size1 + size2 + 1));
-if (s1_s2 == NULL)
+i = 0;
+while (s1[i] != '\0')
+i++;
+strDup = malloc(sizeof(char) * (i + n + 1));
+if (strDup == NULL)
 return (NULL);
-
-for (count = 0; count < size1; count++)
-s1_s2[count] = s1[count];
-for (count2 = 0; count2 < size2; count2++, count++)
-s1_s2[count] = s2[count2];
-s1_s2[count] = '\0';
-
-return (s1_s2);
+i = j = 0;
+while (s1[i] != '\0')
+{
+strDup[i] = s1[i];
+i++;
+}
+while (j < n && s2[j] != '\0')
+{
+trDup[i] = s2[j];
+++, j++;
+}
+strDup[i] = '\0';
+return (strDup);
 }
