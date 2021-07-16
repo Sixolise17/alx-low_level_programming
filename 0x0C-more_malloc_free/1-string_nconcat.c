@@ -1,5 +1,6 @@
-#include "holberton.h"
+#include <stdio.h>
 #include <stdlib.h>
+#include "holberton.h"
 /**
  * *string_nconcat - concatenates two strings
  * @s1: first string
@@ -31,8 +32,8 @@ i++;
 }
 while (j < n && s2[j] != '\0')
 {
-trDup[i] = s2[j];
-++, j++;
+strDup[i] = s2[j];
+i++, j++;
 }
 strDup[i] = '\0';
 return (strDup);
