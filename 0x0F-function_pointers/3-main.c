@@ -11,7 +11,7 @@
  */
 int main(int argc, char *argv[])
 {
-lsint a, b, c;
+int a, b, c;
 int (*f)(int, int);
 
 if (argc != 4)
